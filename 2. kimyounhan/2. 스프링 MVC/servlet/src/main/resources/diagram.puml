@@ -1,0 +1,11 @@
+@startuml
+class DispatcherServlet {
+    - doService()
+    - doDispatch()
+}
+
+DispatcherServlet --> HttpServlet: extends
+DispatcherServlet --> HandlerAdapter: uses
+DispatcherServlet --> HandlerMapping: uses
+DispatcherServlet --> ViewResolver: uses
+@enduml
